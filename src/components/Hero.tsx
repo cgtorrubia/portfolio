@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, FileText } from "lucide-react";
 
 const socialLinks = [
   {
@@ -20,26 +20,42 @@ const socialLinks = [
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6">
-      <div className="max-w-3xl mx-auto text-center">
-        <div className="flex items-center justify-center gap-2 text-muted mb-4">
-          <MapPin className="w-4 h-4" />
-          <span className="text-sm">Manchester, UK</span>
-        </div>
+    <section id="hero" className="min-h-screen flex items-center justify-center px-6 relative snap-start">
+      <div className="max-w-3xl mx-auto text-center relative z-10">
+
 
         <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
-          Cristobal Gutierrez
-          <span className="block text-accent">Torrubia</span>
+          <span className="bg-gradient-to-r from-foreground via-foreground to-muted bg-clip-text text-transparent">
+            Cristobal Gutierrez
+          </span>
+          <span className="block bg-gradient-to-r from-accent via-cyan-400 to-purple-500 bg-clip-text text-transparent">
+            Torrubia
+          </span>
         </h1>
 
-        <h2 className="text-xl md:text-2xl text-muted mb-8">
-          Frontend Software Engineer
+        <h2 className="text-xl md:text-2xl text-muted mb-8 flex items-baseline justify-center gap-3 flex-wrap">
+          <span>Frontend Software Engineer</span>
+          <span className="text-muted/50">·</span>
+          <span className="flex items-baseline gap-1.5 text-base">
+            <MapPin className="w-4 h-4 translate-y-0.5" />
+            Manchester, UK
+          </span>
         </h2>
 
         <p className="text-lg text-foreground/80 max-w-xl mx-auto mb-12 leading-relaxed">
           Building high-impact features with an analytical approach rooted in Linguistics.
           Framework-versatile, passionate about infrastructure and performance optimisation.
         </p>
+
+        <div className="flex items-center justify-center gap-4 mb-6">
+          <a
+            href="/cv.pdf"
+            className="flex items-center gap-2 px-6 py-3 bg-accent text-background font-medium rounded-lg hover:bg-accent/90 hover:scale-105 transition-all duration-300"
+          >
+            <FileText className="w-5 h-5" />
+            Resume
+          </a>
+        </div>
 
         <div className="flex items-center justify-center gap-6">
           {socialLinks.map((link) => (
@@ -48,7 +64,7 @@ export default function Hero() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full border border-card-border bg-card hover:border-accent hover:text-accent transition-colors duration-200"
+              className="p-3 rounded-full border border-card-border bg-card/50 backdrop-blur-sm hover:border-accent hover:text-accent hover:scale-110 transition-all duration-300"
               aria-label={link.name}
             >
               <link.icon className="w-5 h-5" />
