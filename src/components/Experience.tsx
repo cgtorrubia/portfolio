@@ -45,6 +45,19 @@ const experiences = [
       "Created Love Birds app with React Native & Firebase",
     ],
   },
+  {
+    year: "Before",
+    title: "Previous Life",
+    company: "Various roles",
+    location: "Manchester",
+    period: "2021 - 2023",
+    description: "From teaching Spanish to children and adults, to cataloguing in an archive library, to pulling pints in a pub. A winding path that built communication, patience, and problem-solving before finding software engineering.",
+    highlights: [
+      "Pub-turned-nightclub: thick skin and fast-paced problem-solving",
+      "Library assistant: organisation and attention to detail",
+      "Spanish teacher: tailoring approach per audience, from teenagers to retirees",
+    ],
+  },
 ];
 
 export default function Experience() {
@@ -106,7 +119,7 @@ export default function Experience() {
             }}
           />
 
-          <div className="space-y-8 pb-[40vh]">
+          <div className="space-y-8 pb-[15vh]">
             {experiences.map((exp, index) => (
               <div
                 key={index}
