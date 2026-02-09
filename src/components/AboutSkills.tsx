@@ -26,7 +26,7 @@ export default function AboutSkills() {
     <section id="about" className="min-h-screen flex items-center py-24 px-6 snap-start bg-card/30">
       <div className="max-w-6xl mx-auto w-full">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-24">
-          <div>
+          <div className="about-section">
             <h2 className="text-3xl font-bold mb-8">
               <span className="text-accent">#</span> About Me
             </h2>
@@ -60,7 +60,7 @@ export default function AboutSkills() {
             </div>
           </div>
 
-          <div id="skills">
+          <div id="skills" className="skills-section">
             <h2 className="text-3xl font-bold mb-8">
               <span className="text-accent">#</span> Skills
             </h2>
