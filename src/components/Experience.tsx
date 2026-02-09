@@ -5,11 +5,11 @@ import { useState, useEffect, useRef } from "react";
 const experiences = [
   {
     year: "Present",
-    title: "Mid-Level Software Engineer",
+    title: "Software Engineer",
     company: "Clarus Software",
     location: "Remote",
     period: "Oct 2024 - Present",
-    description: "Leading frontend initiatives for warehouse management systems, focusing on handheld device experiences and infrastructure improvements.",
+    description: "Owning frontend initiatives end-to-end — from architecture decisions to deployment strategy — with full technical autonomy across the WMS platform.",
     highlights: [
       "Network drop detection & retry mechanisms for HHD UX",
       "Framework-less TypeScript features with barcode/serial scanning",
@@ -24,9 +24,9 @@ const experiences = [
     company: "Clarus Software",
     location: "Remote",
     period: "Oct 2023 - Oct 2024",
-    description: "Rapidly grew from junior to mid-level by delivering complex features and maintaining high code quality standards.",
+    description: "Delivered complex features independently while maintaining high code quality standards across the WMS platform.",
     highlights: [
-      "Promoted to Mid-Level within 12 months",
+      "Promoted within 12 months: gained full autonomy over feature delivery and infrastructure decisions",
       "Built 'Booking Diary' & 'Packing Desk' interfaces",
       "80%+ test coverage with Cypress, Mocha, QUnit",
       "Optimised GraphQL queries with Apollo",
