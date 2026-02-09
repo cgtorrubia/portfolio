@@ -90,7 +90,7 @@ export default function Experience() {
   }, []);
 
   return (
-    <section id="experience" className="min-h-screen py-24 px-6 snap-start">
+    <section id="experience" className="min-h-screen py-24 px-6">
       <div ref={containerReference} className="max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold mb-12">
           <span className="text-accent">#</span> Experience

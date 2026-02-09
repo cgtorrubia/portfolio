@@ -22,6 +22,9 @@ export default function Sidebar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    const main = document.querySelector("main");
+    if (!main) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -30,13 +33,8 @@ export default function Sidebar() {
           }
         });
       },
-      { threshold: 0.3, rootMargin: "-100px 0px -50% 0px" }
+      { root: main, threshold: 0, rootMargin: "0px 0px -50% 0px" }
     );
-
-    const heroSection = document.querySelector("section");
-    if (heroSection && !heroSection.id) {
-      heroSection.id = "hero";
-    }
 
     navLinks.forEach((link) => {
       const element = document.getElementById(link.id);
