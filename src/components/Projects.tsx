@@ -5,8 +5,8 @@ const featuredProject = {
   description:
     "A cryptography learning platform with daily puzzle challenges. Features procedural puzzle generation using multiple cipher types (Caesar, Vigenère, Atbash) with deterministic seeded randomness. Built with strategy/factory patterns for extensible cipher architecture.",
   tech: ["Next.js 16", "React 19", "TypeScript", "tRPC", "Supabase", "Zod", "Vitest"],
-  github: "https://github.com/cgtorrubia/dcrypto",
-  live: "https://dcrypto.vercel.app",
+  // github: "https://github.com/cgtorrubia/dcrypto",
+  live: "https://d-crypto.vercel.app",
 };
 
 const otherProjects = [
@@ -37,7 +37,7 @@ export default function Projects() {
             <div className="flex items-center justify-between mb-4">
               <span className="text-sm text-accent font-medium">Featured Project</span>
               <div className="flex gap-3">
-                <a
+                {/* <a
                   href={featuredProject.github}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -45,7 +45,7 @@ export default function Projects() {
                   aria-label="GitHub"
                 >
                   <Github className="w-5 h-5" />
-                </a>
+                </a> */}
                 <a
                   href={featuredProject.live}
                   target="_blank"

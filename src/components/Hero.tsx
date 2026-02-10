@@ -49,7 +49,8 @@ export default function Hero() {
 
         <div className="flex items-center justify-center gap-4 mb-6">
           <a
-            href="/cv.pdf"
+            href="/cristobal_torrubia_cv_2026.pdf"
+            target="_blank"
             className="flex items-center gap-2 px-6 py-3 bg-accent text-background font-medium rounded-lg hover:bg-accent/90 hover:scale-105 transition-all duration-300"
           >
             <FileText className="w-5 h-5" />
