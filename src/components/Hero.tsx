@@ -24,7 +24,7 @@ export default function Hero() {
       <div className="max-w-3xl mx-auto text-center relative z-10">
 
 
-        <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
+        <h1 className="text-5xl md:text-7xl font-bold mb-2 tracking-tight">
           <span className="bg-gradient-to-r from-foreground via-foreground to-muted bg-clip-text text-transparent">
             Cristobal Gutierrez
           </span>
@@ -32,9 +32,12 @@ export default function Hero() {
             Torrubia
           </span>
         </h1>
+        <p className="text-sm md:text-base text-muted/60 mb-4 font-fira-code">
+          [kɾisˈtoβal ɣuˈtjeɾeθ toˈruβja]
+        </p>
 
         <h2 className="text-xl md:text-2xl text-muted mb-8 flex items-baseline justify-center gap-3 flex-wrap">
-          <span>Frontend Software Engineer</span>
+          <span>Software Engineer</span>
           <span className="text-muted/50">·</span>
           <span className="flex items-baseline gap-1.5 text-base">
             <MapPin className="w-4 h-4 translate-y-0.5" />

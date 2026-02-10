@@ -13,8 +13,8 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "Cristobal Gutierrez Torrubia | Frontend Software Engineer",
-  description: "Mid-level Frontend Software Engineer based in Manchester. Specializing in React, TypeScript, and modern web technologies.",
+  title: "CGTorrubia | Software Engineer",
+  description: "Software Engineer specializing in TypeScript and framework-agnostic architecture. Expert in Ember.js and React, building scalable warehouse management systems in Manchester.",
 };
 
 export default function RootLayout({

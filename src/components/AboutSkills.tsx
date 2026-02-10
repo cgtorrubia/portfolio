@@ -37,7 +37,7 @@ export default function AboutSkills() {
 
             <div className="space-y-5 text-foreground/80 leading-relaxed">
               <p>
-                Mid-level Frontend Software Engineer with over two years of commercial
+                Software Engineer with over two years of commercial
                 experience in high-complexity warehouse management systems.
               </p>
 
