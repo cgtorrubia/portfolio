@@ -17,7 +17,11 @@ const skillCategories = [
   },
   {
     title: "Testing",
-    skills: ["Cypress", "Mocha", "Vitest", "Jest", "QUnit", "TDD"],
+    skills: ["Cypress", "RTL", "Mocha", "Vitest", "Jest", "QUnit"],
+  },
+  {
+    title: "Practices",
+    skills: ["Agile", "Pair Programming", "TDD"],
   },
 ];
 

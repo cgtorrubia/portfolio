@@ -11,11 +11,12 @@ const experiences = [
     period: "Oct 2024 - Present",
     description: "Owning frontend initiatives end-to-end — from architecture decisions to deployment strategy — with full technical autonomy across the WMS platform.",
     highlights: [
-      "Network drop detection & retry mechanisms for HHD UX",
-      "Framework-less TypeScript features with barcode/serial scanning",
-      "Blue/Green deployment strategy with CloudFront & S3",
-      "Mentoring juniors & bridging engineering with Product",
-      "Framework-agnostic OOP to decouple from Ember.js",
+      "Network monitoring & retry mechanisms for offline-capable handheld devices (HHD)",
+      "Image capture system with local storage, compression, and deferred upload for camera-enabled HHDs",
+      "Packing Desk: touch-based interface for complex packing warehouse workflows",
+      // "Blue/Green deployment strategy: planned and executed zero-downtime releases with CloudFront & S3, enabling instant rollback",
+      "Cross-functional leadership across engineering, product, and QA teams",
+      "Framework-agnostic refactor enabling Ember → React migration",
     ],
   },
   {
@@ -26,10 +27,10 @@ const experiences = [
     period: "Oct 2023 - Oct 2024",
     description: "Delivered complex features independently while maintaining high code quality standards across the WMS platform.",
     highlights: [
-      "Promoted within 12 months: gained full autonomy over feature delivery and infrastructure decisions",
-      "Built 'Booking Diary' & 'Packing Desk' interfaces",
-      "80%+ test coverage with Cypress, Mocha, QUnit",
-      "Optimised GraphQL queries with Apollo",
+      "Promoted within 12 months through independent delivery and cross-team collaboration",
+      "Built Booking Diary scheduling system and PDF Template Builder with Liquid templating",
+      "Drove +80% test coverage and pioneered Cypress E2E adoption across multiple codebases",
+      "Navigated 3 interconnected codebases (Frontend, HHD and its Components) with deep architectural understanding",
     ],
   },
   {
@@ -110,10 +111,10 @@ export default function Experience() {
         </h2>
 
         <div className="relative">
-          <div className="timeline-line absolute left-15 top-0 bottom-0 w-px bg-card-border" />
+          <div className="timeline-line absolute left-4 md:left-15 top-0 bottom-0 w-px bg-card-border" />
 
           <div
-            className="timeline-active-dot absolute left-15 -translate-x-1/2 w-4 h-4 rounded-full bg-accent border-2 border-accent shadow-lg shadow-accent/50 transition-all duration-700 ease-out z-10"
+            className="timeline-active-dot hidden md:block absolute left-15 -translate-x-1/2 w-4 h-4 rounded-full bg-accent border-2 border-accent shadow-lg shadow-accent/50 transition-all duration-700 ease-out z-10"
             style={{
               top: (cardsReferences.current[activeIndex]?.offsetTop ?? 0) + 16,
             }}
@@ -124,11 +125,11 @@ export default function Experience() {
               <div
                 key={index}
                 ref={(el) => { cardsReferences.current[index] = el; }}
-                className="relative flex gap-8"
+                className="relative flex gap-4 md:gap-8"
               >
-                <div className="year-marker w-15 shrink-0 text-right pr-4 pt-5">
+                <div className="year-marker w-16 md:w-15 shrink-0 text-left md:text-right pl-0 md:pr-4 pt-5">
                   <span
-                    className={`text-sm font-medium transition-colors duration-500 ${
+                    className={`text-xs md:text-sm font-medium transition-colors duration-500 ${
                       activeIndex === index ? "text-accent" : "text-muted"
                     }`}
                   >
@@ -136,26 +137,26 @@ export default function Experience() {
                   </span>
                 </div>
 
-                <div className="timeline-dot absolute left-15 top-6 -translate-x-1/2">
+                <div className="timeline-dot absolute left-4 md:left-15 top-6 -translate-x-1/2">
                   <div
                     className={`w-2 h-2 rounded-full transition-all duration-500 ${
                       activeIndex === index
-                        ? "bg-transparent"
+                        ? "bg-transparent md:bg-transparent"
                         : "bg-card-border"
                     }`}
                   />
                 </div>
 
-                <div className="cards-container flex-1 pb-4 flex gap-4 items-start">
+                <div className="cards-container flex-1 pb-4 flex flex-col lg:flex-row gap-4 items-start">
                   <div
-                    className={`experience-card p-5 bg-card border rounded-lg transition-all duration-500 shrink-0 w-96 cursor-pointer hover:scale-[1.02] ${
+                    className={`experience-card p-5 bg-card border rounded-lg transition-all duration-500 w-full lg:w-96 lg:shrink-0 cursor-pointer hover:scale-[1.02] ${
                       activeIndex === index
                         ? "border-accent shadow-lg shadow-accent/10"
                         : "border-card-border"
                     }`}
                     onClick={() => {
                       const card = cardsReferences.current[index];
-                      
+
                       if (card) {
                         card.scrollIntoView({ behavior: "smooth", block: "center" });
                       }
@@ -169,10 +170,25 @@ export default function Experience() {
                     <p className="text-sm text-foreground/70 mt-3 leading-relaxed">
                       {exp.description}
                     </p>
+
+                    <div className="lg:hidden mt-4">
+                      <p className="text-xs text-accent uppercase tracking-wider mb-2 font-medium">Key Achievements</p>
+                      <ul className="space-y-2">
+                        {exp.highlights.map((highlight, i) => (
+                          <li
+                            key={i}
+                            className="text-foreground/80 text-sm flex items-start gap-2"
+                          >
+                            <span className="text-accent mt-0.5 shrink-0">▹</span>
+                            <span>{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
 
                   <div
-                    className={`details-panel w-95 shrink-0 transition-all duration-500 ease-out ${
+                    className={`details-panel hidden lg:block w-95 shrink-0 transition-all duration-500 ease-out ${
                       activeIndex === index
                         ? "opacity-100 translate-x-0"
                         : "opacity-0 -translate-x-4 pointer-events-none"

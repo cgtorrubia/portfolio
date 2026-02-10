@@ -3,8 +3,8 @@ import { ExternalLink, Github } from "lucide-react";
 const featuredProject = {
   title: "D_Crypto",
   description:
-    "A cryptography learning platform with daily puzzle challenges. Features procedural puzzle generation using multiple cipher types (Caesar, Vigenère, Atbash) with deterministic seeded randomness. Built with strategy/factory patterns for extensible cipher architecture.",
-  tech: ["Next.js 16", "React 19", "TypeScript", "tRPC", "Supabase", "Zod", "Vitest"],
+    "A cryptography learning platform with daily puzzle challenges. Features OAuth/SSO with Google using NextAuth v5 and JWT-based sessions. Implements strategy/factory patterns for extensible cipher architecture (Caesar, Vigenère, Atbash, Substitution) with procedural generation via seeded randomness. Protected routes with middleware authentication, anonymous session migration on sign-in, and type-safe tRPC endpoints. Weighted difficulty distribution ensures varied cipher selection across Easy/Medium/Hard modes.",
+  tech: ["Next.js", "React", "TypeScript", "NextAuth", "tRPC", "Supabase", "Zod", "Vitest"],
   // github: "https://github.com/cgtorrubia/dcrypto",
   live: "https://d-crypto.vercel.app",
 };
