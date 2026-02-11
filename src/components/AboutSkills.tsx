@@ -69,7 +69,7 @@ export default function AboutSkills() {
               <span className="text-accent">#</span> Skills
             </h2>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {skillCategories.map((category) => (
                 <div key={category.title} className="space-y-3">
                   <h3 className="text-sm font-semibold text-muted uppercase tracking-wider">
