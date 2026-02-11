@@ -149,7 +149,8 @@ export default function Sidebar() {
 
         <div className="sidebar-bottom flex flex-col gap-6">
           <a
-            href="/cv.pdf"
+            href="/cristobal_torrubia_cv_2026.pdf"
+            target="_blank"
             className="flex items-center justify-center gap-2 px-2 group-hover:px-4 py-2 text-sm border border-accent text-accent rounded hover:bg-accent hover:text-background transition-all duration-200"
           >
             <FileText className="w-4 h-4 flex-shrink-0" />

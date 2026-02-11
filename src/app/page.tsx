@@ -11,7 +11,7 @@ export default function Home() {
     <div className="bg-background text-foreground relative">
       <BackgroundBlobs />
       <Sidebar />
-      <main className="snap-y snap-proximity h-screen overflow-y-auto scroll-smooth pt-16 lg:pt-0 lg:pl-16">
+      <main className="snap-y snap-proximity h-dvh overflow-y-auto scroll-smooth pt-16 lg:pt-0 lg:pl-16">
         <Hero />
         <AboutSkills />
         <Experience />
