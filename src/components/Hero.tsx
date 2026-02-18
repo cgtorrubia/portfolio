@@ -57,7 +57,7 @@ export default function Hero() {
             className="flex items-center gap-2 px-6 py-3 bg-accent text-background font-medium rounded-lg hover:bg-accent/90 hover:scale-105 transition-all duration-300"
           >
             <FileText className="w-5 h-5" />
-            Resume
+            CV
           </a>
         </div>
 

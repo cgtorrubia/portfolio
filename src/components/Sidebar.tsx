@@ -92,7 +92,7 @@ export default function Sidebar() {
               className="flex items-center gap-2 px-4 py-2 text-sm border border-accent text-accent rounded hover:bg-accent hover:text-background transition-colors"
             >
               <FileText className="w-4 h-4" />
-              Resume
+              CV
             </a>
             {socialLinks.map((link) => (
               <a
@@ -154,7 +154,7 @@ export default function Sidebar() {
             className="flex items-center justify-center gap-2 px-2 group-hover:px-4 py-2 text-sm border border-accent text-accent rounded hover:bg-accent hover:text-background transition-all duration-200"
           >
             <FileText className="w-4 h-4 flex-shrink-0" />
-            <span className="hidden group-hover:inline">Resume</span>
+            <span className="hidden group-hover:inline">CV</span>
           </a>
 
           <div className="social-links flex flex-col gap-3 items-center">
